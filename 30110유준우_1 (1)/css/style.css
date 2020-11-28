@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    width: 200px;
+    margin-top: 30px;
+}
+
+.menu {
+    margin-top: 40px;
+    list-style: none;
+    width: 600px;
+    z-index: 100;
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+.menu li {
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.menu li > a {
+    border: 1px solid #000;
+    display: block;
+    padding: 0 20px;
+    transition: .3s;
+    width: 100%;
+}
+
+.menu li:hover > a{
+    background-color: #000;
+    color: #fff;
+}
+
+.sub-menu {
+    border: 1px solid #000;
+    display: none;
+}
+
+.sub-menu a {
+    display: block;
+    padding: 5px;
+}
+
+.sub-menu a:hover {
+    background-color: #fff;
+    color: #fff;
+}
+
+.sub-back {
+    height: 150px;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    display: none;
+}
+
+#content {
+    margin-top: 30px;
+}
+
+.slide {
+    height: 300px;
+    overflow: hidden;
+    margin-top: 20px;
+    position: relative;
+}
+
+.s-text {
+    position: absolute;
+    font-size: 20px;
+    width: 500px;
+    height: 50px;
+    background-color: #6775f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    border-radius: 10px;
+}
+
+.slide ul {
+    width: calc(100% * 3);
+    display: flex;
+    animation: slide 8s infinite;
+    z-index: -100;
+}
+
+.slide li {
+    width: calc(100% / 3);
+    height: 300px;
+}
+
+.slide li:nth-child(1) {
+    background-image: url("../img/slide1.jpg");
+}
+
+.slide li:nth-child(2) {
+    background-image: url("../img/slide2.jpg");
+}
+
+.slide li:nth-child(3) {
+    background-image: url("../img/slide3.jpg");
+}
+
+@keyframes slide {
+    0% {margin-left:0;} /* 0 ~ 10  : 정지 */
+    10% {margin-left:0;} /* 10 ~ 25 : 변이 */
+    25% {margin-left:-100%;} /* 25 ~ 35 : 정지 */
+    35% {margin-left:-100%;} /* 35 ~ 50 : 변이 */
+    50% {margin-left:-200%;}
+    60% {margin-left:-200%;}
+    100% {margin-left:0;}
+}
+
+.items {
+    width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.items > div {
+    height: 200px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.btn {
+    margin-left: 1px;
+}
+.btn a {
+    border: 1px solid black;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    padding: 3px;
+    border-radius: 5px 5px 0 0;
+    margin-right: -6px;
+    background-color: #ddd;
+    color: black;
+    border-bottom: 0;
+    margin: -1px;
+    cursor: pointer;
+}
+
+.tab-inner {
+    width: 400px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.tabs div {
+    border: 1px solid black;
+    height: 160px;
+    width: 400px;
+}
+
+.tab1 {
+    padding: 0 10px;
+}
+
+.tab1 a {
+    display: block;
+    border-bottom: 1px solid #000;
+    padding: 3px;
+}
+
+.tab1 a:last-child {
+    border-bottom: none;
+}
+
+.tab1 a b{
+    float: right;
+    font-weight: normal;
+}
+
+.tab2 {
+    text-align: center;
+    padding-top: 22px;
+}
+
+.tab2 img {
+    width: 120px;
+}
+
+.banner {
+    background-image: url("../img/banner1.jpg");
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+.b-text p {
+    color: #fff;
+    font-size: 14px;
+    background-color: #6775f5;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+footer {
+    height: 100px;
+    background-color: #d3d3d3;
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+}
+
+footer .left {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.left > .top {
+    height: 50%;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.left > .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+footer .family {
+    width: 20%;
+    border-left: 1px solid #000;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.family p {
+    padding: 5px;
+}
